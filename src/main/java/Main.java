@@ -1,6 +1,8 @@
-import java.util.*;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         String StringCalc_logo = """
                                 
                                 
@@ -31,9 +33,51 @@ public class Main {
         System.out.println("Welcome to StringCalc!");
         System.out.println(StringCalc_logo);
         System.out.println("Enter your Expression here!");
-        Scanner sc = new Scanner(System.in);
         String expression = sc.nextLine();
-        double result = evaluateExpression(expression); //TODO: Create function evaluateExpression and parsing logic
-        System.out.println(result);
+
+        // Evaluate the expression
+        Calculator calculator = new Calculator();
+        try {
+            double result = calculator.evaluate(expression);
+            System.out.println("Result: " + result);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        sc.close();
+    }
+}
+
+class Calculator {
+    public double evaluate(String expression) {
+        if (!isValidExpression(expression)) {
+            throw new IllegalArgumentException("Invalid expression format");
+        }
+        String[] tokens = expression.split("(?<=\\d)(?=\\D)|(?<=\\D)(?=\\d)");
+        double result = Double.parseDouble(tokens[0]);
+
+        for (int i = 1; i < tokens.length; i += 2) {
+            String operator = tokens[i];
+            double operand = Double.parseDouble(tokens[i + 1]);
+            switch (operator) {
+                case "+":
+                    result += operand;
+                    break;
+                case "-":
+                    result -= operand;
+                    break;
+                case "*":
+                    result *= operand;
+                    break;
+                default:
+                    throw new IllegalArgumentException("Invalid operator: " + operator);
+            }
+        }
+
+        return result;
+    }
+
+    private boolean isValidExpression(String expression) {
+        // Check if the expression contains only digits and +,-,and *.
+        return expression.matches("^\\d+(?:[+\\-*]\\d+)*$");
     }
 }
