@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52e5b966-5ff4-42d1-bbbc-065e965a49f5" name="Changes" comment="Basic main.java implementation.">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/tests.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,24 +42,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CalculatorTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MainTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.MainTest.testEmptyInput.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nanda/MyRepos/StringCalc&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.38162544&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.main.executor": "Run",
+    "JUnit.CalculatorTest.executor": "Coverage",
+    "JUnit.MainTest.executor": "Coverage",
+    "JUnit.MainTest.testEmptyInput.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/nanda/MyRepos/StringCalc",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.38162544"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.CalculatorTest">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nanda\MyRepos\StringCalc" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MainTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="StringCalc" />
@@ -106,8 +109,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CalculatorTest" />
         <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="JUnit.CalculatorTest" />
         <item itemvalue="JUnit.MainTest.testEmptyInput" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.main" />
@@ -146,7 +149,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Basic main.java implementation." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/StringCalc$CalculatorTest.ic" NAME="CalculatorTest Coverage Results" MODIFIED="1710008613158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/StringCalc$MainTest.ic" NAME="MainTest Coverage Results" MODIFIED="1710009999104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/StringCalc$CalculatorTest.ic" NAME="CalculatorTest Coverage Results" MODIFIED="1710014778901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/StringCalc$MainTest.ic" NAME="MainTest Coverage Results" MODIFIED="1710014786516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
