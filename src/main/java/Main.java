@@ -1,8 +1,9 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Welcome to StringCalc!");
         String StringCalc_logo = """
                                 
                                 
@@ -30,54 +31,25 @@ public class Main {
                                                                                                                                                                                                                                                              \s
                                 
                 """;
-        System.out.println("Welcome to StringCalc!");
         System.out.println(StringCalc_logo);
+        // This program does not include Division functionality as the assignment requires only +,-, and *.
+        System.out.println("\n");
         System.out.println("Enter your Expression here!");
         String expression = sc.nextLine();
-
-        // Evaluate the expression
-        Calculator calculator = new Calculator();
+        // Check if the input expression is empty
+        if (expression.trim().isEmpty()) {
+            System.out.println("Error: Expression cannot be empty!");
+            sc.close();
+            return;
+        }
+        Calculator calc = new Calculator();
         try {
-            double result = calculator.evaluate(expression);
+            double result;
+            result = calc.evaluate(expression);
             System.out.println("Result: " + result);
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
         }
         sc.close();
-    }
-}
-
-class Calculator {
-    public double evaluate(String expression) {
-        if (!isValidExpression(expression)) {
-            throw new IllegalArgumentException("Invalid expression format");
-        }
-        String[] tokens = expression.split("(?<=\\d)(?=\\D)|(?<=\\D)(?=\\d)");
-        double result = Double.parseDouble(tokens[0]);
-
-        for (int i = 1; i < tokens.length; i += 2) {
-            String operator = tokens[i];
-            double operand = Double.parseDouble(tokens[i + 1]);
-            switch (operator) {
-                case "+":
-                    result += operand;
-                    break;
-                case "-":
-                    result -= operand;
-                    break;
-                case "*":
-                    result *= operand;
-                    break;
-                default:
-                    throw new IllegalArgumentException("Invalid operator: " + operator);
-            }
-        }
-
-        return result;
-    }
-
-    private boolean isValidExpression(String expression) {
-        // Check if the expression contains only digits and +,-,and *.
-        return expression.matches("^\\d+(?:[+\\-*]\\d+)*$");
     }
 }
