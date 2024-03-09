@@ -36,3 +36,5 @@ jobs:
             token: ${{ secrets.CODECOV_TOKEN }}
             slug: Nanda128/StringCalc
 
+      - name: Print Java Version
+        run: java -version
