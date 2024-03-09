@@ -21,7 +21,7 @@ jobs:
       - name: Set up JDK
         run: |
              sudo apt-get update
-             sudo apt-get install -y openjdk-17-jdk
+             sudo apt-get install -y openjdk-11-jdk
              java -version
 
       - name: Build with Maven
@@ -35,6 +35,3 @@ jobs:
         with:
             token: ${{ secrets.CODECOV_TOKEN }}
             slug: Nanda128/StringCalc
-
-      - name: Print Java Version
-        run: java -version
