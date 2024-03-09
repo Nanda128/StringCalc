@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -42,10 +44,10 @@ public class Main {
             sc.close();
             return;
         }
-        Calculator calc = new Calculator();
+        Calculator calculator = new Calculator();
         try {
             double result;
-            result = calc.evaluate(expression);
+            result = calculator.evaluate(expression);
             System.out.println("Result: " + result);
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
