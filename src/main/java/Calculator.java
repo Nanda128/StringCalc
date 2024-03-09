@@ -71,7 +71,7 @@ class Calculator {
             if (Character.isDigit(c)) {
                 currentToken.append(c);
             } else if (isOperator(c)) {
-                if (!currentToken.isEmpty()) {
+                if (currentToken.length() != 0) {
                     tokens.add(currentToken.toString());
                     currentToken = new StringBuilder();
                 }
