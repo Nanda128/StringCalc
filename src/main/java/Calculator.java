@@ -81,7 +81,7 @@ class Calculator {
             }
         }
         // Add the last token if any
-        if (!currentToken.isEmpty()) {
+        if (currentToken.length() != 0) {
             tokens.add(currentToken.toString());
         }
         return tokens;
